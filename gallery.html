@@ -55,75 +55,83 @@
         </div>
     </header>
 
-    <!-- Gallery Section -->
-    <section class="py-5">
+    <!-- Gallery Filter Section -->
+    <section class="filter-buttons-container">
         <div class="container">
-            <!-- Filter Buttons -->
-            <div class="text-center mb-5" data-aos="fade-up">
-                <div class="d-flex justify-content-center gap-2 flex-wrap">
-                    <button class="filter-button active" data-filter="all">All Spaces</button>
-                    <button class="filter-button" data-filter="food">Food Stall</button>
-                    <button class="filter-button" data-filter="bar">Resto Bar</button>
-                    <button class="filter-button" data-filter="rooms">Premium Rooms</button>
-                    <button class="filter-button" data-filter="events">Events</button>
-                </div>
+            <div class="d-flex justify-content-start gap-2"
+                style="overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 4px;">
+                <button class="filter-button active" data-filter="all">All Spaces</button>
+                <button class="filter-button" data-filter="food">Food Stall</button>
+                <button class="filter-button" data-filter="bar">Resto Bar</button>
+                <button class="filter-button" data-filter="rooms">Premium Rooms</button>
+                <button class="filter-button" data-filter="events">Events</button>
             </div>
+        </div>
+    </section>
 
-            <!-- Gallery Grid -->
-            <div class="gallery-container" data-aos="fade-up">
+    <!-- Gallery Grid -->
+    <section class="gallery-grid pb-5">
+        <div class="container-fluid px-md-4">
+            <div class="gallery-container">
                 <!-- Food Stall Images -->
-                <div class="gallery-item" data-category="food">
-                    <img src="images/food-stall.jpg" alt="Gourmet Street Food">
+                <div class="gallery-item" data-category="food" data-aos="fade-up">
+                    <img src="images/food-stall.jpg" alt="Gourmet Street Food" loading="lazy">
                     <div class="overlay">
-                        <h4 class="mb-2">Gourmet Street Food</h4>
-                        <p class="mb-0">Experience culinary excellence in a casual setting</p>
+                        <h4 class="h5 mb-2">Gourmet Street Food</h4>
+                        <p class="mb-0 small">Experience culinary excellence in a casual setting</p>
                     </div>
                 </div>
 
                 <!-- Resto Bar Images -->
-                <div class="gallery-item" data-category="bar">
-                    <img src="images/resto-bar.jpg" alt="Elegant Bar Setting">
+                <div class="gallery-item" data-category="bar" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/resto-bar.jpg" alt="Elegant Bar Setting" loading="lazy">
                     <div class="overlay">
-                        <h4 class="mb-2">Elegant Bar Setting</h4>
-                        <p class="mb-0">Sophisticated drinks in a modern atmosphere</p>
+                        <h4 class="h5 mb-2">Elegant Bar Setting</h4>
+                        <p class="mb-0 small">Sophisticated drinks in a modern atmosphere</p>
                     </div>
                 </div>
 
                 <!-- Room Images -->
-                <div class="gallery-item" data-category="rooms">
-                    <img src="images/rooms.jpg" alt="Luxury Suite">
+                <div class="gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="200">
+                    <img src="images/rooms.jpg" alt="Luxury Suite" loading="lazy">
                     <div class="overlay">
-                        <h4 class="mb-2">Luxury Suite</h4>
-                        <p class="mb-0">Premium comfort with city views</p>
+                        <h4 class="h5 mb-2">Luxury Suite</h4>
+                        <p class="mb-0 small">Premium comfort with city views</p>
                     </div>
                 </div>
 
                 <!-- Additional Images -->
-                <div class="gallery-item" data-category="food">
-                    <img src="images/hero-main.jpg" alt="Kitchen Preparation">
+                <div class="gallery-item" data-category="food" data-aos="fade-up">
+                    <img src="images/hero-main.jpg" alt="Kitchen Preparation" loading="lazy">
                     <div class="overlay">
-                        <h4 class="mb-2">Kitchen Preparation</h4>
-                        <p class="mb-0">Where culinary magic happens</p>
+                        <h4 class="h5 mb-2">Kitchen Preparation</h4>
+                        <p class="mb-0 small">Where culinary magic happens</p>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-category="events">
-                    <img src="images/values.jpg" alt="Event Space">
+                <div class="gallery-item" data-category="events" data-aos="fade-up" data-aos-delay="100">
+                    <img src="images/values.jpg" alt="Event Space" loading="lazy">
                     <div class="overlay">
-                        <h4 class="mb-2">Event Space</h4>
-                        <p class="mb-0">Perfect for special occasions</p>
+                        <h4 class="h5 mb-2">Event Space</h4>
+                        <p class="mb-0 small">Perfect for special occasions</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lightbox -->
+    <!-- Updated Lightbox -->
     <div class="lightbox">
-        <div class="lightbox-close"><i class="bi bi-x-lg"></i></div>
-        <div class="lightbox-prev"><i class="bi bi-chevron-left"></i></div>
-        <div class="lightbox-next"><i class="bi bi-chevron-right"></i></div>
-        <img src="" alt="Lightbox Image">
+        <div class="lightbox-close" role="button" aria-label="Close lightbox">
+            <i class="bi bi-x-lg"></i>
+        </div>
+        <div class="lightbox-prev" role="button" aria-label="Previous image">
+            <i class="bi bi-chevron-left"></i>
+        </div>
+        <div class="lightbox-next" role="button" aria-label="Next image">
+            <i class="bi bi-chevron-right"></i>
+        </div>
+        <img src="" alt="Lightbox Image" />
     </div>
 
     <!-- Footer -->
@@ -158,9 +166,7 @@
                 <small>&copy; 2025 Urban Oasis. All rights reserved.</small>
             </div>
         </div>
-    </footer>
-
-    <!-- Scripts -->
+    </footer>    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -168,72 +174,8 @@
             duration: 800,
             once: true
         });
-
-        // Gallery filter functionality
-        document.addEventListener('DOMContentLoaded', function () {
-            const filterButtons = document.querySelectorAll('.filter-button');
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = lightbox.querySelector('img');
-            const lightboxClose = lightbox.querySelector('.lightbox-close');
-            const lightboxPrev = lightbox.querySelector('.lightbox-prev');
-            const lightboxNext = lightbox.querySelector('.lightbox-next');
-            let currentImageIndex = 0;
-            const images = Array.from(document.querySelectorAll('.gallery-item img'));
-
-            // Filter functionality
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function () {
-                    const filter = this.getAttribute('data-filter');
-
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-
-                    galleryItems.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-
-            // Lightbox functionality
-            galleryItems.forEach((item, index) => {
-                item.addEventListener('click', function () {
-                    currentImageIndex = index;
-                    const imgSrc = this.querySelector('img').src;
-                    lightboxImg.src = imgSrc;
-                    lightbox.classList.add('active');
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-
-            lightboxClose.addEventListener('click', () => {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-
-            lightboxPrev.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                lightboxImg.src = images[currentImageIndex].src;
-            });
-
-            lightboxNext.addEventListener('click', () => {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                lightboxImg.src = images[currentImageIndex].src;
-            });
-
-            // Close lightbox on escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-                    lightbox.classList.remove('active');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
     </script>
+    <script src="js/gallery.js"></script>
 </body>
 
 </html>
