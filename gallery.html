@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Urban Oasis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Urban Oasis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offerings.html">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <header class="gallery-hero">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-8 text-center">
+                    <h1 class="display-3 fw-bold mb-4">Explore Our Spaces</h1>
+                    <p class="lead mb-0">Take a visual journey through our premium offerings and discover the perfect urban oasis for your needs
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    <button class="filter-button active" data-filter="all">All Spaces</button>
+                    <button class="filter-button" data-filter="food">Food Stall</button>
+                    <button class="filter-button" data-filter="bar">Resto Bar</button>
+                    <button class="filter-button" data-filter="rooms">Premium Rooms</button>
+                    <button class="filter-button" data-filter="events">Events</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-container" data-aos="fade-up">
+                <!-- Food Stall Images -->
+                <div class="gallery-item" data-category="food">
+                    <img src="images/food-stall.jpg" alt="Gourmet Street Food">
+                    <div class="overlay">
+                        <h4 class="mb-2">Gourmet Street Food</h4>
+                        <p class="mb-0">Experience culinary excellence in a casual setting</p>
+                    </div>
+                </div>
+
+                <!-- Resto Bar Images -->
+                <div class="gallery-item" data-category="bar">
+                    <img src="images/resto-bar.jpg" alt="Elegant Bar Setting">
+                    <div class="overlay">
+                        <h4 class="mb-2">Elegant Bar Setting</h4>
+                        <p class="mb-0">Sophisticated drinks in a modern atmosphere</p>
+                    </div>
+                </div>
+
+                <!-- Room Images -->
+                <div class="gallery-item" data-category="rooms">
+                    <img src="images/rooms.jpg" alt="Luxury Suite">
+                    <div class="overlay">
+                        <h4 class="mb-2">Luxury Suite</h4>
+                        <p class="mb-0">Premium comfort with city views</p>
+                    </div>
+                </div>
+
+                <!-- Additional Images -->
+                <div class="gallery-item" data-category="food">
+                    <img src="images/hero-main.jpg" alt="Kitchen Preparation">
+                    <div class="overlay">
+                        <h4 class="mb-2">Kitchen Preparation</h4>
+                        <p class="mb-0">Where culinary magic happens</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="events">
+                    <img src="images/values.jpg" alt="Event Space">
+                    <div class="overlay">
+                        <h4 class="mb-2">Event Space</h4>
+                        <p class="mb-0">Perfect for special occasions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-close"><i class="bi bi-x-lg"></i></div>
+        <div class="lightbox-prev"><i class="bi bi-chevron-left"></i></div>
+        <div class="lightbox-next"><i class="bi bi-chevron-right"></i></div>
+        <img src="" alt="Lightbox Image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="fw-bold">Urban Oasis</h4>
+                    <p class="text-muted">Where comfort meets convenience.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="offerings.html" class="text-decoration-none text-muted">Our Offerings</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none text-muted">Gallery</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>123 Urban Street</li>
+                        <li>City Center, State 12345</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: info@urbanoasis.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center text-muted">
+                <small>&copy; 2025 Urban Oasis. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Gallery filter functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            const lightboxPrev = lightbox.querySelector('.lightbox-prev');
+            const lightboxNext = lightbox.querySelector('.lightbox-next');
+            let currentImageIndex = 0;
+            const images = Array.from(document.querySelectorAll('.gallery-item img'));
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const filter = this.getAttribute('data-filter');
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Lightbox functionality
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', function () {
+                    currentImageIndex = index;
+                    const imgSrc = this.querySelector('img').src;
+                    lightboxImg.src = imgSrc;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            lightboxClose.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+
+            lightboxPrev.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentImageIndex].src;
+            });
+
+            lightboxNext.addEventListener('click', () => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                lightboxImg.src = images[currentImageIndex].src;
+            });
+
+            // Close lightbox on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

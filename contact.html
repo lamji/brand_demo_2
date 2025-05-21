@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Urban Oasis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Urban Oasis</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offerings.html">Offerings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <header class="contact-hero py-5 mt-5">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
+                <p class="lead mb-0">We'd love to hear from you. Drop us a line or visit us at our location.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="contact-form p-4 rounded-4 shadow-sm bg-white">
+                        <h3 class="mb-4">Send us a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="food-stall">Food Stall Inquiry</option>
+                                    <option value="resto-bar">Resto Bar Reservation</option>
+                                    <option value="rooms">Room Booking</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark px-4 py-2">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h3 class="mb-4">Contact Information</h3>
+                        <div class="row g-4">
+                            <!-- Address -->
+                            <div class="col-md-12">
+                                <div class="contact-item d-flex align-items-start">
+                                    <i class="bi bi-geo-alt fs-4 me-3 text-dark"></i>
+                                    <div>
+                                        <h5>Address</h5>
+                                        <p class="mb-0">123 Urban Street, City Center<br>State 12345</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-md-12">
+                                <div class="contact-item d-flex align-items-start">
+                                    <i class="bi bi-telephone fs-4 me-3 text-dark"></i>
+                                    <div>
+                                        <h5>Phone</h5>
+                                        <p class="mb-0">
+                                            Main: (123) 456-7890<br>
+                                            Reservations: (123) 456-7891
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-12">
+                                <div class="contact-item d-flex align-items-start">
+                                    <i class="bi bi-envelope fs-4 me-3 text-dark"></i>
+                                    <div>
+                                        <h5>Email</h5>
+                                        <p class="mb-0">
+                                            General: info@urbanoasis.com<br>
+                                            Reservations: bookings@urbanoasis.com
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hours -->
+                            <div class="col-md-12">
+                                <div class="contact-item d-flex align-items-start">
+                                    <i class="bi bi-clock fs-4 me-3 text-dark"></i>
+                                    <div>
+                                        <h5>Hours</h5>
+                                        <p class="mb-0">
+                                            Food Stall: Mon-Sun 10AM-10PM<br>
+                                            Resto Bar: Mon-Sun 5PM-2AM<br>
+                                            Reception: 24/7
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social Media -->
+                        <div class="social-media mt-5">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-dark fs-4"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-dark fs-4"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-dark fs-4"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="text-dark fs-4"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-5 bg-light">
+        <div class="container">
+            <div class="ratio ratio-21x9">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.985!3d40.748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM40zMCc0OC4wIk4gNzPCsDU5JzA2LjAiVw!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                    style="border:0;" allowfullscreen="" loading="lazy" class="rounded-4 shadow-sm"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="fw-bold">Urban Oasis</h4>
+                    <p class="text-muted">Where comfort meets convenience.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none text-muted">About Us</a></li>
+                        <li><a href="offerings.html" class="text-decoration-none text-muted">Our Offerings</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none text-muted">Gallery</a></li>
+                        <li><a href="contact.html" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li>123 Urban Street</li>
+                        <li>City Center, State 12345</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: info@urbanoasis.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center text-muted">
+                <small>&copy; 2025 Urban Oasis. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Contact form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Add your form submission logic here
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

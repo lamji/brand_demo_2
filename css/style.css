@@ -1,0 +1,630 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #00C6FB 0%, #005BEA 100%);
+    --secondary-gradient: linear-gradient(135deg, #FF6B6B 0%, #556270 100%);
+    --surface-color: #ffffff;
+    --text-color: #1d1d1f;
+    --accent-color: #06c;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+/* Navigation */
+.navbar {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-color) !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--primary-gradient);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 76px;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-main.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.hero-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(165deg, rgba(255, 255, 255, 0.95) 60%, rgba(240, 242, 245, 0.95) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 0;
+}
+
+.display-1 {
+    font-size: 5.5rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    font-weight: 700;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    padding-bottom: 0.1em;
+    /* Add padding to prevent text cutoff */
+}
+
+/* Features Section */
+.feature-card {
+    background-color: var(--surface-color);
+    border-radius: 24px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-gradient);
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-16px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card:hover::before {
+    opacity: 0.05;
+}
+
+.icon-container {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons */
+.btn-dark {
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-dark:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark:hover::before {
+    opacity: 1;
+}
+
+.btn-dark span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.feature-icon {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(165deg, #ffffff 60%, #f0f2f5 100%);
+    padding-top: 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.achievement-stat {
+    position: relative;
+    padding-right: 2rem;
+}
+
+.achievement-stat:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.journey-card {
+    background: var(--surface-color);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.year-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.value-item .icon-box {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.value-item .icon-box i {
+    font-size: 1.5rem;
+}
+
+.team-card {
+    background: var(--surface-color);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .social-links {
+    opacity: 1;
+}
+
+.award-item {
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.award-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Offerings Page Styles */
+.offerings-hero {
+    min-height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-main.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 0 !important;
+}
+
+.offering-card {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--surface-color);
+    height: 100%;
+}
+
+.offering-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.offering-card .card-img-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.offering-card .card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.offering-card:hover .card-img-container img {
+    transform: scale(1.1);
+}
+
+.offering-features {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.offering-features:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 80px;
+    color: var(--accent-color);
+    opacity: 0.1;
+    font-family: serif;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card {
+    border: none;
+    border-radius: 16px;
+    overflow: visible;
+    /* Changed from hidden to visible */
+    transition: all 0.3s ease;
+    background: white;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card.featured {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section {
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 16px;
+    overflow: visible;
+    /* Changed from hidden to visible */
+    padding: 3rem;
+    /* Increased padding */
+}
+
+/* Add space below lists in pricing cards */
+.pricing-card ul {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+/* Ensure buttons in pricing cards have proper spacing */
+.pricing-card .btn {
+    margin-top: auto;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Gallery Page Styles */
+.gallery-hero {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/hero-main.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.filter-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.gallery-container {
+    columns: 3 300px;
+    column-gap: 1.5rem;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: white;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.lightbox-nav:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .display-1 {
+        font-size: 3.5rem;
+        letter-spacing: -1px;
+        line-height: 1.2;
+        padding-bottom: 0.2em;
+    }
+
+    .hero-section {
+        min-height: 80vh;
+    }
+
+    .about-hero {
+        padding-top: 100px;
+    }
+
+    .achievement-stat {
+        padding-right: 1rem;
+    }
+
+    .achievement-stat:not(:last-child)::after {
+        display: none;
+    }
+}
+
+/* Common spacing utilities */
+.section-padding {
+    padding: 8rem 0;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
